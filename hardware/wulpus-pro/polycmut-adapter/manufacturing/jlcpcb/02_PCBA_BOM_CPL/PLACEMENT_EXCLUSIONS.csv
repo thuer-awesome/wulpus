@@ -1,0 +1,5 @@
+﻿Designator,Category,Comment,Footprint,Layer,Mid_X_mm,Mid_Y_mm,Rotation_deg,Reason_Not_In_BOM_CPL
+TP4,测试焊盘,TPAD6R,TP06R,Top,-4.5000,-14.5000,90,测试点铜盘，不采购、不贴装
+TP3,测试焊盘,TPAD6R,TP06R,Top,4.5000,-14.5000,90,测试点铜盘，不采购、不贴装
+TP2,测试焊盘,TPAD6R,TP06R,Top,-4.5000,14.5000,90,测试点铜盘，不采购、不贴装
+TP1,测试焊盘,TPAD6R,TP06R,Top,4.5000,14.5000,90,测试点铜盘，不采购、不贴装

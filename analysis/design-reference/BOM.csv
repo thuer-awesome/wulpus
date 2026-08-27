@@ -1,0 +1,71 @@
+item,refs,qty,function,manufacturer,mpn_or_value,footprint,rating_or_key_parameter,assembly_note,official_reference
+IC,U1,1,USB2 data ESD,STMicroelectronics,USBLC6-2SC6,SOT-23-6,3.5pF max and IEC61000-4-2 8kV contact,FIT,ST_USBLC6-2_datasheet.pdf
+IC,U2,1,1S charger with PowerPath,Texas Instruments,BQ24074RGTR,VQFN-16-EP_3x3mm_P0.5mm_EP1.68mm,4.4V OUT and 1.5A max charge capability,FIT; 300mA programmed,TI_BQ24074_datasheet.pdf
+IC,U3,1,3V3 buck-boost,Texas Instruments,TPS63070RNMT,TI_RNM0015A_VQFN-HR-15_2.5x3.0mm,2.0-16V input; adjustable 3.31V,FIT; use TI-specific land pattern,TI_TPS63070_datasheet.pdf
+Module,U4,1,MCU WiFi BLE USB,Espressif,ESP32-S3-WROOM-1-N8,ESP32-S3-WROOM-1_official_land_pattern,3.0-3.6V and >=0.5A supply,FIT; module antenna at board edge,Espressif_ESP32-S3-WROOM-1_datasheet.pdf
+IC,U5,1,5V boost,Texas Instruments,TPS61222DCKR,SC-70-6_DCK,0.7-5.5V input fixed 5V,FIT,TI_TPS61222_datasheet.pdf
+IC,U6,1,5V load switch and discharge,Texas Instruments,TPS22919DCKR,SC-70-6_DCK,1.6-5.5V; 1.5A; 24R QOD,FIT,TI_TPS22919_datasheet.pdf
+IC,U7,1,15V boost,Analog Devices,LT1945IMS#PBF,MSOP-10_P0.5mm,36V switch abs max; 350mA current limit,FIT; positive channel only,ADI_LT1945_1945fa.pdf
+IC,U8 U9,2,non-inverting pulse drivers,Microchip,MCP1416T-E/OT,SOT-23-5,4.5-18V; 1.5A peak; VIH max 2.4V,FIT,Microchip_MCP1415-16_20002092G.pdf
+IC,U10,1,16-channel analog switch mux,Microchip,HV2707T-C/R8X,LQFP-48_7x7mm_P0.5mm,5V VDD; 3.3V VLL; +/-100V signal rating,FIT; VLL-first sequence mandatory,Microchip_HV2607-HV2707-HV2708_20006390B.pdf
+IC,U11,1,4-channel T-R protector,Microchip,MD0101K6-G,Custom_DFN-18-EP_5x5mm,100MHz typ; 15R typ; +/-100V protection,FIT channel1 only; reuse original Altium footprint and verify,Microchip_MD0101_20005916A.pdf
+Inductor,L1,1,TPS63070 energy storage,Coilcraft,XFL4020-152MEC,XFL4020_official_land,1.5uH shielded,FIT,Coilcraft_XFL4020_inductors.pdf
+Inductor,L2,1,TPS61222 energy storage,Coilcraft,LPS4018-472MRC,LPS4018_official_land,4.7uH shielded,FIT,Coilcraft_LPS4018_inductors.pdf
+Inductor,L3,1,LT1945 energy storage,Coilcraft,LPS4018-103MRC,LPS4018_official_land,10uH; Isat 1.1A; DCR max 0.20R,FIT; replaces under-rated original WULPUS inductor,Coilcraft_LPS4018_inductors.pdf
+Diode,D1,1,LT1945 boost rectifier,Diodes Inc,ZHCS400,SOD-323,40V 0.4A Schottky,FIT,Diodes_ZHCS400_datasheet.pdf
+Ferrite,FB1,1,15V rail filter,Murata,BLM18PG300SH1D,0603_1608Metric,30R typ at 100MHz; 1A; DCR 0.05R,FIT,Murata_BLM18PG300SH1D_specification.pdf
+Fuse,F1,1,USB resettable fuse,Bourns,MF-NSMF110,1206_3216Metric,6V; Ihold 1.1A; Itrip 2.2A,FIT for 500mA mode; use MF-NSMF150 for 1A hot-environment mode,Bourns_MF-NSMF_PTC.pdf
+Connector,J1,1,USB-C USB2 top mount,GCT,USB4105-GF-A,USB_C_GCT_USB4105_16P_TopMnt,5A collective VBUS rating,FIT,GCT_USB4105_connector_drawing.pdf
+Connector,J2,1,protected battery with NTC,JST,B3B-PH-K-S(LF)(SN),JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,2mm pitch 3-pin,FIT; mate PHR-3,JST_PH_series_connector.pdf
+Connector,J3,1,RX_OUT coax,Amphenol RF,132289,SMA_Amphenol_132289_EdgeMount,50R edge SMA for 1.6mm board,FIT; change connector if using 1.0/1.2mm board,Amphenol_132289_SMA_customer_drawing.pdf
+Connector,J4,1,RX debug and AFE power,Generic,1x03 2.54mm,PinHeader_1x03_P2.54mm_Vertical,3V3 output <=100mA,FIT,
+Connector,J5,1,control expansion,Generic,2x06 2.54mm,PinHeader_2x06_P2.54mm_Vertical,UART I2C trigger status,FIT,
+Connector,J6,1,8-channel transducer with returns,Generic,2x08 2.54mm,PinHeader_2x08_P2.54mm_Vertical,odd signal and even AGND,FIT for short laboratory cable,
+Switch,SW1,1,main 3V3 enable,Generic,SPST slide,SW_SPST_PCM12,low-current EN signal,FIT,
+Switch,SW2 SW3,2,reset and boot,CK or equivalent,PTS645 series,SW_SPST_PTS645,NO tactile,FIT,
+NetTie,NT1,1,DGND-AGND single point,EDA custom,NetTie_2,NetTie-2_SMD_Pad0.5mm,0R copper-equivalent,FIT; schematic net-tie component,
+Resistor,R1 R2,2,USB-C Rd,Generic,5.1k 1%,R_0603_1608Metric,0.1W,FIT,
+Resistor,R3,1,TS fallback,Generic,10k 1%,R_0603_1608Metric,0.1W,DNP if battery NTC is fitted,
+Resistor,R4 R5 R6,3,charger default pulls,Generic,100k 1%,R_0603_1608Metric,0.1W,FIT,
+Resistor,R7 R8,2,status pullups,Generic,10k 1%,R_0603_1608Metric,0.1W,FIT,
+Resistor,R9,1,BQ ILIM programming,Generic,1.55k 1%,R_0603_1608Metric,0.1W,FIT; used only in adapter mode,
+Resistor,R10,1,BQ timer programming,Generic,46.4k 1%,R_0603_1608Metric,0.1W,FIT; about 6.19h typical and nearest to 6.25h target,
+Resistor,R11 R12,2,BQ termination and charge programming,Generic,2.94k 1%,R_0603_1608Metric,0.1W,FIT,
+Resistor,R13 R14,2,alternative 1A input straps,Generic,100k 1%,R_0603_1608Metric,0.1W,DNP; fit only with R5/R6 removed and known 1A source,
+Resistor,R15 R16,2,PWM mode and power-good pull,Generic,10k 1%,R_0603_1608Metric,0.1W,FIT,
+Resistor,R17,1,TPS63070 feedback top,Generic,470k 1%,R_0603_1608Metric,0.1W,FIT,
+Resistor,R18,1,TPS63070 feedback bottom,Generic,150k 1%,R_0603_1608Metric,0.1W,FIT,
+Resistor,R19,1,TPS63070 EN pulldown,Generic,100k 1%,R_0603_1608Metric,0.1W,FIT,
+Resistor,R20 R21 R22,3,EN series and ESP pullups,Generic,10k 1%,R_0603_1608Metric,0.1W,FIT,
+Resistor,R23 R24,2,USB source termination,Generic,22R 1%,R_0603_1608Metric,0.1W,FIT close to ESP module,
+Resistor,R25 R26 R27,3,power enable pulldowns,Generic,100k 1%,R_0603_1608Metric,0.1W,FIT,
+Resistor,R28,1,LT1945 feedback top,Generic,2.00M 1%,R_0603_1608Metric,0.1W and >=50V,FIT,
+Resistor,R29,1,LT1945 feedback bottom,Generic,178k 1%,R_0603_1608Metric,0.1W,FIT,
+Resistor,R30,1,15V bleeder,Generic,1.00M 1%,R_0603_1608Metric,0.1W and >=50V,FIT,
+Resistor,R31 R34,2,driver input damping,Generic,33R 1%,R_0603_1608Metric,0.1W,FIT,
+Resistor,R32 R35 R39 R40,4,digital pulldowns,Generic,100k 1%,R_0603_1608Metric,0.1W,FIT,
+Resistor,R33 R36,2,driver output damping,Generic,4.7R 1%,R_0805_2012Metric,0.25W pulse capable,FIT; tune 0-10R after measurement,
+Resistor,R37 R38,2,TX snubber series resistor,Generic,10R,R_0805_2012Metric,0.25W pulse capable,DNP tune with C27/C28,
+Resistor,R41 R42,2,HV2707 safe-state pullups,Generic,10k 1%,R_0603_1608Metric,0.1W,FIT,
+Resistor,R43,1,HV2707 DOUT series,Generic,33R,R_0603_1608Metric,0.1W,DNP unless readback used,
+Resistor,R44 R46,2,RX series and clamp ground link,Generic,0R,R_0603_1608Metric,0.1W,FIT,
+Resistor,R45,1,RX coupling bypass,Generic,0R,R_0603_1608Metric,0.1W,DNP,
+Resistor,R47,1,RX optional termination,Generic,100R 1%,R_0603_1608Metric,0.1W,DNP; match external AFE and cable,
+Resistor,R48,1,USB shell direct-ground option,Generic,0R,R_0603_1608Metric,0.1W,FIT by default; remove if RC shell scheme used,
+Resistor,R49,1,USB shell bleed option,Generic,1M,R_0603_1608Metric,0.1W,DNP,
+Capacitor,C1 C18,2,input bypass,Generic,4.7uF 10V X7R,C_0603_1608Metric,effective capacitance checked,FIT,
+Capacitor,C2 C5 C13 C24 C26 C30 C32,7,logic and driver bypass,Generic,100nF X7R,C_0603_1608Metric,10V or 25V as rail requires,FIT,
+Capacitor,C3 C8 C11 C15 C16,5,rail bulk,Generic,10uF X7R,C_0603_1608Metric,10V; DC-bias verified,FIT,
+Capacitor,C4 C12,2,SYS and ESP bulk,Generic,22uF X7R,C_0805_2012Metric,10V; DC-bias verified,FIT,
+Capacitor,C6 C7,2,TPS63070 input bulk,Generic,10uF X7R,C_0805_2012Metric,10V; DC-bias verified,FIT,
+Capacitor,C9 C10,2,TPS63070 output bulk,Generic,22uF X7R,C_0805_2012Metric,10V; total effective >=15uF,FIT,
+Capacitor,C14 C17 C29 C31,4,control rail bypass,Generic,1uF X7R,C_0603_1608Metric,10V,FIT,
+Capacitor,C19,1,LT1945 raw output,Generic,1uF 50V X7R,C_0805_2012Metric,50V,FIT,
+Capacitor,C20,1,LT1945 feed-forward,Generic,4.7pF C0G,C_0603_1608Metric,50V,FIT,
+Capacitor,C21,1,15V filtered bulk,Generic,2.2uF 50V X7R,C_0805_2012Metric,50V; DC-bias verified,FIT,
+Capacitor,C22,1,15V high-frequency bypass,Generic,100nF 50V X7R,C_0603_1608Metric,50V,FIT,
+Capacitor,C23 C25,2,MCP1416 local bulk,Generic,1uF 25V low-ESR,C_0805_2012Metric,25V,FIT; optional parallel film footprint recommended,
+Capacitor,C27 C28,2,TX snubber capacitor,Generic,100pF C0G,C_0603_1608Metric,50V,DNP tune with R37/R38,
+Capacitor,C33,1,RX AC coupling,Generic,10nF 100V C0G,C_1206_3216Metric,100V,FIT for MHz transducer; bypass option R45,
+Capacitor,C34,1,USB shell HF coupling option,Generic,1nF 1kV C0G,C_1206_3216Metric,1kV,DNP; use only after EMC evaluation,
+TestPoint,TP1-TP15,15,bring-up measurement,Generic,loop or pad,TestPoint_Loop_D1.0mm,match named nets,FIT; TP8 switch-node extra small,

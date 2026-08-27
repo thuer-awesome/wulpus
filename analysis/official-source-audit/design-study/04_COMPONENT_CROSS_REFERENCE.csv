@@ -1,0 +1,26 @@
+Module,WULPUS,WULPUS_Pro,Commercial_96ARC_PowerDaughter,Function,Status_or_note
+Transducer_channels,8 time-multiplexed,16 time-multiplexed,96 array elements through U12/U13,Acoustic aperture,Commercial mapping confirmed from PCB
+TX_voltage,About 15 V unipolar,30 V unipolar,+50/-50 V rails,Transmit energy,Probe drive must be set by rating and acoustic tests
+TX_pulser,Discrete WULPUS pulser,30 V Pro pulser,HV7350K6-G x2,Generate short ultrasound pulse,Commercial 16 outputs confirmed
+HV_channel_select,HV2707 with 8 TX plus 8 RX switches,HV2707 one switch per channel to common TX_RX,SY2320 marking x3,Select probe channel/aperture,SY2320 exact datasheet and truth table missing
+TR_protection,WULPUS protected receive path,Enhanced Pro protected receive path,MD0101K6-G x4,Protect receive electronics,Commercial 16 protected buses confirmed
+RX_crosspoint,None one shared RX,None one shared RX,MT8816AF1 16x8,Select 8 of 16 protected buses,Confirmed by BOM and net connectivity
+LNA,OPA836,OPA836,Integrated in AD9273,Low-noise gain,Confirmed
+VGA_TGC,MSP430 internal PGA,AD8338 VGA/TGC,AD9273 VGA plus AD5601 DAC,Depth gain compensation,AD5601 output reaches AD9273 TGC node
+Envelope,None by default,LTC5507 optional,FPGA or host inferred,Amplitude detection,Commercial algorithm not confirmed
+Anti_alias,Analog path and MCU ADC constraints,Switched LPF plus ADC constraints,AD9273 integrated AAF,Limit RF bandwidth,Confirmed
+ADC,MSP430FR5043 12-bit 8 MS/s,MSP430FR5043 12-bit 8 MS/s,AD9273 8ch 12-bit 50 MS/s,Digitize RF,Commercial raw rate 4.8 Gbit/s
+Realtime_core,MSP430FR5043,MSP430FR5043,Cyclone 10 LP 10CL040,Deterministic timing and capture,Confirmed
+Host_controller,nRF52832 onboard,nRF52 DK or ESP32-C6,CC3200R1M2RGC,Transport configuration UI,Host is not beamformer
+Wireless,BLE via nRF52,BLE or Wi-Fi,CC3200 Wi-Fi,Data/control transport,Raw commercial ADC cannot be sent directly
+FPGA_config,None,None,EPCS16SI8N on 96ARC,FPGA bitstream storage,No dump supplied
+Host_flash,MCU/host internal,MCU/host internal,W25Q80D on PowerDaughter,CC3200 SimpleLink filesystem,Dump supplied; not FPGA bitstream
+Calibration_memory,MCU FRAM,MCU FRAM,FM24CL16B on PowerDaughter,Serial/config/calibration state,Dump contains WLPCDJB038 and flags
+HV_converter,WULPUS HV board,WULPUS Pro HV board,LT8471 plus custom transformers,Generate positive/negative rails,Confirmed from BOM/photos/connector
+Battery_charger,Project-specific,Project-specific,LTC4001,Single-cell Li-ion management,Commercial board confirmed
+Wireless_power,None,None,BQ51013B,Wireless charging receiver,Commercial board confirmed
+Current_monitor,Project-specific,Project-specific,AD8418,Measure system/battery current,Commercial board confirmed
+Power_button,Project-specific,Project-specific,LTC2951,Controlled startup/shutdown,Commercial board confirmed
+Main_PCB_stackup,Official manufacturing package,Official manufacturing package,96ARC 6-layer 1.2 mm outer 1 oz inner 0.5 oz,PCB manufacturing,BOM is authoritative not imported KiCad thickness
+Power_PCB_stackup,Separate HV board,Separate HV board,PowerDaughter 4-layer 1.6 mm outer 1 oz inner 0.5 oz,PCB manufacturing,BOM is authoritative
+Target_use,A-mode wearable/point sensing,Enhanced A-mode and CMUT study,Array B-mode and potential Doppler,Application,Commercial exact image pipeline awaits FPGA evidence

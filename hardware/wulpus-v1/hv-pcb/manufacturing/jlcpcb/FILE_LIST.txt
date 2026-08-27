@@ -1,0 +1,26 @@
+HV PCB
+
+JLCPCB PCB upload: 01_PCB_Gerber_Drill/hv_pcb_gerber_drill_jlcpcb.zip
+PCBA/component data: 02_PCBA_BOM_CPL/
+Reference data: 03_Reference/
+
+Gerber_Drill_Only:
+  PCB1.G1
+  PCB1.G2
+  PCB1.GBL
+  PCB1.GBO
+  PCB1.GBP
+  PCB1.GBS
+  PCB1.GM
+  PCB1.GTL
+  PCB1.GTO
+  PCB1.GTP
+  PCB1.GTS
+  PCB1-Plated.TXT
+  PCB1-NonPlated.TXT
+
+BOM groups: 25
+CPL placements: 48
+SMT BOM groups: 25
+SMT CPL placements: 48
+Hand-solder designators: none

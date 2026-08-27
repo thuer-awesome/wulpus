@@ -1,0 +1,28 @@
+WULPUS Pro acquisition development board
+
+PCB upload ZIP: 01_PCB_Gerber_Drill/wulpus_pro_acquisition_dev_board_gerber_drill_jlcpcb.zip
+PCBA data: 02_PCBA_BOM_CPL/
+Engineering references: 03_Reference/
+
+Gerber/drill upload entries:
+  wulpus_pro_acq.GTL
+  wulpus_pro_acq.G1
+  wulpus_pro_acq.G2
+  wulpus_pro_acq.G3
+  wulpus_pro_acq.G4
+  wulpus_pro_acq.GBL
+  wulpus_pro_acq.GTO
+  wulpus_pro_acq.GBO
+  wulpus_pro_acq.GTS
+  wulpus_pro_acq.GBS
+  wulpus_pro_acq.GTP
+  wulpus_pro_acq.GBP
+  wulpus_pro_acq.GM
+  wulpus_pro_acq.TXT
+
+Official BOM groups: 65
+Official BOM designators: 164
+JLCPCB SMT BOM groups: 63
+JLCPCB SMT placements: 157
+Manual PTH designators: X1, X3, X4, X5, X6, X7, X8
+Non-component P&P exclusions: 29

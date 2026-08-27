@@ -1,0 +1,11 @@
+Repository: https://github.com/pulp-bio/wulpus
+Snapshot commit: 48a913c9c20c5220b92e19e274565a9e9881cee6
+Commit date: 2026-06-21 17:50:15 +0200
+Commit subject: Merge pull request #44 from pulp-bio/dev
+Downloaded on: 2026-08-02 Asia/Shanghai
+Clone mode: git clone --depth 1 --recurse-submodules --shallow-submodules
+Submodules: none reported by git submodule status
+Git LFS pointers: none found by repository text scan
+
+Original repository snapshot is also available locally at:
+E:\电子框图\wulpus\wulpus\source_current

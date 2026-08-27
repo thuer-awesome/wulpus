@@ -1,0 +1,40 @@
+section,item,esp32_gpio_or_bit,direction,default,connection_or_meaning,notes
+GPIO,HV_EN,GPIO4,OUT,LOW,LT1945 SHDN2,100k pulldown; active high
+GPIO,BOOST5_EN,GPIO5,OUT,LOW,TPS61222 EN,100k pulldown; enable before MUX_PWR_EN
+GPIO,TX_PULSE,GPIO6,OUT,LOW,MCP1416 A/B inputs through separate 33R,100k pulldown at each driver
+GPIO,MUX_CLR,GPIO7,OUT,HIGH,HV2707 CLR,10k pullup; HIGH forces all switches OFF
+GPIO,MUX_DIN,GPIO8,OUT,LOW,HV2707 DIN,100k pulldown
+GPIO,MUX_CLK,GPIO9,OUT,LOW,HV2707 CLK,100k pulldown
+GPIO,MUX_LE,GPIO10,OUT,HIGH,HV2707 LE,10k pullup; keep HIGH while shifting
+GPIO,CHG_CE,GPIO11,OUT,LOW,BQ24074 CE,100k pulldown; HIGH pauses charging for low-noise capture
+GPIO,CHG_STAT,GPIO12,IN,HIGH,BQ24074 CHG open drain,10k pullup to 3V3; LOW charging; 2Hz flash fault
+GPIO,PGOOD,GPIO13,IN,HIGH,BQ24074 PGOOD open drain,10k pullup to 3V3; LOW valid input
+GPIO,TRIG_IN,GPIO14,IN,LOW,Expansion connector trigger input,33R series and 100k pulldown
+GPIO,SYNC_OUT,GPIO15,OUT,LOW,Expansion connector sync output,33R series
+GPIO,I2C_SDA,GPIO16,BIDIR,HIGH,Expansion connector SDA,4.7k pullup to 3V3 DNP
+GPIO,MUX_PWR_EN,GPIO17,OUT,LOW,TPS22919 ON,100k pulldown; enable after 5V_RAW is stable
+GPIO,I2C_SCL,GPIO18,OUT,HIGH,Expansion connector SCL,4.7k pullup to 3V3 DNP
+GPIO,USB_D-,GPIO19,BIDIR,-,USB connector through ESD and 22R,90 ohm differential pair with GPIO20
+GPIO,USB_D+,GPIO20,BIDIR,-,USB connector through ESD and 22R,90 ohm differential pair with GPIO19
+GPIO,UART_TX,GPIO43,OUT,HIGH,Expansion connector UART TX,Module pin 37 TXD0
+GPIO,UART_RX,GPIO44,IN,HIGH,Expansion connector UART RX,Module pin 36 RXD0
+GPIO,BOOT,GPIO0,IN,HIGH,BOOT button to GND,10k pullup; strapping pin
+MUX,ch1_RX,SW0 bit0,-,OFF,RX_BUS to CH1,SW0A pin12 RX_BUS; SW0B pin11 CH1
+MUX,ch1_TX,SW1 bit1,-,OFF,TX_BUS_A to CH1,SW1A pin10 TX_BUS_A; SW1B pin9 CH1
+MUX,ch2_RX,SW2 bit2,-,OFF,RX_BUS to CH2,SW2A pin8 RX_BUS; SW2B pin7 CH2
+MUX,ch2_TX,SW3 bit3,-,OFF,TX_BUS_A to CH2,SW3A pin6 TX_BUS_A; SW3B pin5 CH2
+MUX,ch3_RX,SW4 bit4,-,OFF,RX_BUS to CH3,SW4A pin4 RX_BUS; SW4B pin3 CH3
+MUX,ch3_TX,SW5 bit5,-,OFF,TX_BUS_B to CH3,SW5A pin48 TX_BUS_B; SW5B pin47 CH3
+MUX,ch4_RX,SW6 bit6,-,OFF,RX_BUS to CH4,SW6A pin46 RX_BUS; SW6B pin45 CH4
+MUX,ch4_TX,SW7 bit7,-,OFF,TX_BUS_B to CH4,SW7A pin44 TX_BUS_B; SW7B pin43 CH4
+MUX,ch5_RX,SW8 bit8,-,OFF,RX_BUS to CH5,SW8A pin42 RX_BUS; SW8B pin41 CH5
+MUX,ch5_TX,SW9 bit9,-,OFF,TX_BUS_B to CH5,SW9A pin40 TX_BUS_B; SW9B pin39 CH5
+MUX,ch6_RX,SW10 bit10,-,OFF,RX_BUS to CH6,SW10A pin38 RX_BUS; SW10B pin37 CH6
+MUX,ch6_TX,SW11 bit11,-,OFF,TX_BUS_B to CH6,SW11A pin34 TX_BUS_B; SW11B pin33 CH6
+MUX,ch7_RX,SW12 bit12,-,OFF,RX_BUS to CH7,SW12A pin32 RX_BUS; SW12B pin31 CH7
+MUX,ch7_TX,SW13 bit13,-,OFF,TX_BUS_A to CH7,SW13A pin30 TX_BUS_A; SW13B pin29 CH7
+MUX,ch8_RX,SW14 bit14,-,OFF,RX_BUS to CH8,SW14A pin28 RX_BUS; SW14B pin27 CH8
+MUX,ch8_TX,SW15 bit15,-,OFF,TX_BUS_A to CH8,SW15A pin26 TX_BUS_A; SW15B pin25 CH8
+PROTOCOL,shift_order,SW15 first then down to SW0,-,-,DIN sampled on CLK low-to-high,LE stays HIGH while shifting; pulse LE HIGH-to-LOW to latch then return HIGH
+PROTOCOL,clear,-,-,-,CLR HIGH,Overrides all inputs and forces every switch OFF
+PROTOCOL,break_before_make,-,-,-,Never enable TX and RX of same channel together,Wait at least 5us after every HV2707 switch-state change

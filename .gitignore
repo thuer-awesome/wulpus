@@ -1,0 +1,36 @@
+# OS/editor/runtime noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*.tmp
+*.temp
+*.bak
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Local build output and vendor tool state
+build/
+dist/
+out/
+*.elf
+*.hex
+*.map
+*.o
+*.obj
+*.d
+*.log
+.vscode/
+.idea/
+.venv/
+
+# Do not re-add the excluded source workspace payloads
+pcb_reverse_engineering/
+tools/kicad_portable/
+tools/typst_portable/
+commercial_fpga_reference/
+tmp/
+

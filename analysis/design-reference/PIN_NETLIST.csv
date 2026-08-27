@@ -1,0 +1,142 @@
+ref,pin,name,net,connection_or_rule
+U1,1,I/O1,USB_DM_CONN,Connector-side D-
+U1,2,GND,DGND,Shortest return with at least two nearby vias
+U1,3,I/O2,USB_DP_CONN,Connector-side D+
+U1,4,I/O2,USB_DP_ESD,Protected D+ toward ESP32
+U1,5,VBUS,USB5_IN,Local 100nF to pin2
+U1,6,I/O1,USB_DM_ESD,Protected D- toward ESP32
+U2,1,TS,BAT_NTC,10k pack NTC to battery negative; 10k fixed fallback DNP
+U2,2 3,BAT,BAT+,Battery positive and 10uF local capacitor
+U2,4,CE,CHG_CE,GPIO11 and 100k pulldown; high disables charging only
+U2,5,EN2,BQ_EN2,100k pulldown default
+U2,6,EN1,BQ_EN1,100k pullup to SYS default
+U2,7,PGOOD,PGOOD,Open drain to GPIO13 with 10k pullup
+U2,8,VSS,DGND,Direct ground connection
+U2,9,CHG,CHG_STAT,Open drain to GPIO12 with 10k pullup
+U2,10 11,OUT,SYS,22uF local capacitor
+U2,12,ILIM,BQ_ILIM,1.55k to DGND for optional adapter-current mode
+U2,13,IN,USB5_IN,4.7uF local input capacitor
+U2,14,TMR,BQ_TMR,46.4k to DGND; about 6.19h typical
+U2,15,ITERM,BQ_ITERM,2.94k to DGND gives about 30mA in USB500 mode
+U2,16,ISET,BQ_ISET,2.94k to DGND gives about 303mA programmed charge
+U2,EP,Thermal pad,DGND,4-9 thermal vias; do not omit pin8 connection
+U3,1,PS/SYNC,TPS_PS_SYNC,10k to DGND; optional jumper to 3V3
+U3,2,PG,3V3_PG,10k pullup and test point
+U3,3,VAUX,TPS_VAUX,100nF to DGND; no other load
+U3,4,GND,DGND,Control ground
+U3,5,FB,TPS_FB,470k to 3V3 and 150k to DGND
+U3,6,FB2,NC,Leave open
+U3,7 8,VOUT,3V3,Output capacitor bank
+U3,9,L2,TPS_L2,Second inductor terminal
+U3,10,PGND,DGND,Power ground to capacitor returns
+U3,11,L1,TPS_L1,First inductor terminal
+U3,12 13,VIN,SYS,Input capacitor bank
+U3,14,EN,3V3_EN,SYS through switch and 10k; 100k pulldown
+U3,15,VSEL,DGND,Voltage scaling disabled
+U4,1 40 41,GND/EP,DGND,All ground terminals and exposed pad
+U4,2,3V3,3V3,22uF and 100nF local decoupling
+U4,3,EN,ESP_EN,10k pullup; 1uF to ground; reset button
+U4,4,GPIO4,HV_EN,LT1945 SHDN2
+U4,5,GPIO5,BOOST5_EN,TPS61222 EN
+U4,6,GPIO6,TX_PULSE,Both MCP1416 inputs through separate 33R
+U4,7,GPIO7,MUX_CLR,HV2707 CLR with 10k pullup
+U4,8,GPIO15,SYNC_OUT,Expansion output
+U4,9,GPIO16,I2C_SDA,Expansion SDA
+U4,10,GPIO17,MUX_PWR_EN,TPS22919 ON
+U4,11,GPIO18,I2C_SCL,Expansion SCL
+U4,12,GPIO8,MUX_DIN,HV2707 DIN
+U4,13,GPIO19,USB_D-,22R to protected USB D-
+U4,14,GPIO20,USB_D+,22R to protected USB D+
+U4,17,GPIO9,MUX_CLK,HV2707 CLK
+U4,18,GPIO10,MUX_LE,HV2707 LE with 10k pullup
+U4,19,GPIO11,CHG_CE,BQ24074 CE
+U4,20,GPIO12,CHG_STAT,BQ24074 CHG open-drain input
+U4,21,GPIO13,PGOOD,BQ24074 PGOOD open-drain input
+U4,22,GPIO14,TRIG_IN,Expansion trigger input
+U4,23,GPIO21,MUX_DOUT,Optional HV2707 readback through 33R DNP
+U4,27,GPIO0,BOOT,10k pullup and boot button to DGND
+U4,36,GPIO44/U0RXD,UART_RX,Expansion UART input
+U4,37,GPIO43/U0TXD,UART_TX,Expansion UART output
+U5,1,VIN,SYS,10uF input capacitor
+U5,2,FB,5V_RAW,Tie to output for fixed 5V version
+U5,3,GND,AGND_HV,Local power ground
+U5,4,VOUT,5V_RAW,10uF output capacitor and U6 input
+U5,5,L,TPS5_L,4.7uH inductor to SYS
+U5,6,EN,BOOST5_EN,GPIO5 and 100k pulldown
+U6,1,IN,5V_RAW,From TPS61222 output
+U6,2,GND,AGND_HV,Local ground
+U6,3,ON,MUX_PWR_EN,GPIO17 and 100k pulldown
+U6,4,NC,NC,Leave open
+U6,5,QOD,VDD5_SW,Tie directly to pin6 for internal 24R discharge
+U6,6,VOUT,VDD5_SW,HV2707 VDD and local capacitor
+U7,1,NFB1,NC,Unused negative channel feedback
+U7,2,SHDN1,AGND_HV,Disable negative channel
+U7,3,GND,AGND_HV,Local control ground
+U7,4,SHDN2,HV_EN,GPIO4 and 100k pulldown
+U7,5,FB2,LT_FB2,2.00M top and 178k bottom divider
+U7,6,SW2,SW15_NODE,Minimize copper area
+U7,7 9,PGND,AGND_HV,Both pins connected locally
+U7,8,VIN,SYS,4.7uF local input capacitor
+U7,10,SW1,NC,Unused switch node; no copper extension
+U8,1,NC,NC,Leave open
+U8,2,VDD,V15,1uF plus 100nF local decoupling
+U8,3,IN,TX_IN_A,TX_PULSE through 33R; 100k pulldown
+U8,4,GND,AGND_HV,Short high-current return
+U8,5,OUT,TX_BUS_A,4.7R series to HV2707 TX switches
+U9,1,NC,NC,Leave open
+U9,2,VDD,V15,1uF plus 100nF local decoupling
+U9,3,IN,TX_IN_B,TX_PULSE through 33R; 100k pulldown
+U9,4,GND,AGND_HV,Short high-current return
+U9,5,OUT,TX_BUS_B,4.7R series to HV2707 TX switches
+U10,1 2 14 35 36,NC,NC,Leave open
+U10,3,SW4B,CH3,Channel 3 node
+U10,4,SW4A,RX_BUS,Channel 3 RX switch common side
+U10,5,SW3B,CH2,Channel 2 node
+U10,6,SW3A,TX_BUS_A,Channel 2 TX switch common side
+U10,7,SW2B,CH2,Channel 2 node
+U10,8,SW2A,RX_BUS,Channel 2 RX switch common side
+U10,9,SW1B,CH1,Channel 1 node
+U10,10,SW1A,TX_BUS_A,Channel 1 TX switch common side
+U10,11,SW0B,CH1,Channel 1 node
+U10,12,SW0A,RX_BUS,Channel 1 RX switch common side
+U10,13,GND,AGND_HV,Analog ground
+U10,15,VDD,VDD5_SW,1uF plus 100nF to AGND_HV
+U10,16,VSS,NC,Float for single 5V supply operation
+U10,17,DGND,DGND,Digital ground
+U10,18,VLL,3V3,1uF plus 100nF to DGND; power before VDD
+U10,19,DIN,MUX_DIN,GPIO8 with 100k pulldown
+U10,20,CLK,MUX_CLK,GPIO9 with 100k pulldown
+U10,21,LE,MUX_LE,GPIO10 with 10k pullup
+U10,22,CLR,MUX_CLR,GPIO7 with 10k pullup; high all OFF
+U10,23,DOUT,MUX_DOUT,Optional GPIO21 readback
+U10,24,RGND,AGND_HV,Bleed resistor ground
+U10,25,SW15B,CH8,Channel 8 node
+U10,26,SW15A,TX_BUS_A,Channel 8 TX switch common side
+U10,27,SW14B,CH8,Channel 8 node
+U10,28,SW14A,RX_BUS,Channel 8 RX switch common side
+U10,29,SW13B,CH7,Channel 7 node
+U10,30,SW13A,TX_BUS_A,Channel 7 TX switch common side
+U10,31,SW12B,CH7,Channel 7 node
+U10,32,SW12A,RX_BUS,Channel 7 RX switch common side
+U10,33,SW11B,CH6,Channel 6 node
+U10,34,SW11A,TX_BUS_B,Channel 6 TX switch common side
+U10,37,SW10B,CH6,Channel 6 node
+U10,38,SW10A,RX_BUS,Channel 6 RX switch common side
+U10,39,SW9B,CH5,Channel 5 node
+U10,40,SW9A,TX_BUS_B,Channel 5 TX switch common side
+U10,41,SW8B,CH5,Channel 5 node
+U10,42,SW8A,RX_BUS,Channel 5 RX switch common side
+U10,43,SW7B,CH4,Channel 4 node
+U10,44,SW7A,TX_BUS_B,Channel 4 TX switch common side
+U10,45,SW6B,CH4,Channel 4 node
+U10,46,SW6A,RX_BUS,Channel 4 RX switch common side
+U10,47,SW5B,CH3,Channel 3 node
+U10,48,SW5A,TX_BUS_B,Channel 3 TX switch common side
+U11,1 3 5 7 9 18,NC,NC,Leave open
+U11,2,TX1,RX_PROTECT_IN,RX_BUS through C33 and R44
+U11,4 6 8,TX2 TX3 TX4,NC,Unused channels
+U11,10 12 14,RGND4 RGND3 RGND2,NC,Unused channels
+U11,11 13 15,RX4 RX3 RX2,NC,Unused channels
+U11,16,RGND1,AGND_HV,0R connection
+U11,17,RX1,RX_OUT,To SMA and optional 100R termination DNP
+U11,EP,Center tab,AGND_HV,Use official custom land pattern

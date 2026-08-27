@@ -1,0 +1,16 @@
+Repository: https://github.com/pulp-bio/wulpus-pro.git
+Branch: dev
+Snapshot commit: d49cf62a53e260d7670d7375b2f6ca3aad627ea7
+Commit date: 2025-11-08T12:27:30+01:00
+Commit subject: Merge pull request #9 from pulp-bio/bug/16channels
+Downloaded on: 2026-08-09 Asia/Shanghai
+Clone mode: git clone --depth 1
+Submodules: none reported by git submodule status
+Git LFS tracked files: none reported by git lfs ls-files
+Git tracked files: 349
+Source working tree: clean
+
+Original shallow clone:
+E:\电子框图\wulpus\wulpus_pro\source_pro
+
+This is a complete file snapshot of the selected commit, but the local clone does not contain the repository's full Git history.

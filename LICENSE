@@ -1,0 +1,8 @@
+This integration archive contains works with different upstream licenses and is
+not offered under a single blanket license. The applicable license travels with
+each source tree. See `LICENSES/README.md` and the full license texts in
+`LICENSES/`. In particular, WULPUS hardware source is Solderpad Hardware
+License 0.51, WULPUS host software is Apache License 2.0, documentation images
+are CC BY 4.0, and firmware contains third-party components with their own
+notices.
+

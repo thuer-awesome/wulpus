@@ -1,0 +1,23 @@
+nRF52 SWD Programmer Adapter
+
+JLCPCB PCB upload: 01_PCB_Gerber_Drill/nrf52_programmer_pcb_gerber_drill_jlcpcb.zip
+PCBA/component data: 02_Manual_Solder/
+Reference data: 03_Reference/
+
+Gerber_Drill_Only:
+  PCB_CONN_NORDIC.GBL
+  PCB_CONN_NORDIC.GBO
+  PCB_CONN_NORDIC.GBP
+  PCB_CONN_NORDIC.GBS
+  PCB_CONN_NORDIC.GM
+  PCB_CONN_NORDIC.GTL
+  PCB_CONN_NORDIC.GTO
+  PCB_CONN_NORDIC.GTP
+  PCB_CONN_NORDIC.GTS
+  PCB_CONN_NORDIC.TXT
+
+BOM groups: 2
+CPL placements: 2
+SMT BOM groups: 1
+SMT CPL placements: 1
+Hand-solder designators: S_NRDC1

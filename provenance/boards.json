@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "generated_for": "WULPUS hardware and embedded archive",
+  "source_repositories": [
+    {
+      "id": "wulpus-v1",
+      "url": "https://github.com/pulp-bio/wulpus",
+      "branch": "main",
+      "tag": "v1.2.3",
+      "commit": "48a913c9c20c5220b92e19e274565a9e9881cee6",
+      "tracked_files": 336
+    },
+    {
+      "id": "wulpus-pro",
+      "url": "https://github.com/pulp-bio/wulpus-pro",
+      "branch": "dev",
+      "commit": "d49cf62a53e260d7670d7375b2f6ca3aad627ea7",
+      "tracked_files": 349
+    }
+  ],
+  "boards": [
+    {
+      "id": "wulpus-v1-acquisition",
+      "product": "wulpus-v1",
+      "source": "hardware/wulpus-v1/acquisition-pcb/source",
+      "manufacturing": "hardware/wulpus-v1/acquisition-pcb/manufacturing",
+      "required": [
+        "hardware/wulpus-v1/acquisition-pcb/source/wulpus_acq_pcb.PrjPcb",
+        "hardware/wulpus-v1/acquisition-pcb/source/PCB1.PcbDoc",
+        "hardware/wulpus-v1/acquisition-pcb/source/00_POWER.SchDoc",
+        "hardware/wulpus-v1/acquisition-pcb/source/docs/wulpus_acq_pcb_schematics.PDF",
+        "hardware/wulpus-v1/acquisition-pcb/source/docs/wulpus_acq_pcb_bom.xlsx",
+        "hardware/wulpus-v1/acquisition-pcb/manufacturing/jlcpcb/02_PCBA_BOM_CPL/BOM_JLCPCB.csv",
+        "hardware/wulpus-v1/acquisition-pcb/manufacturing/jlcpcb/02_PCBA_BOM_CPL/CPL_JLCPCB.csv",
+        "hardware/wulpus-v1/acquisition-pcb/manufacturing/jlcpcb/02_PCBA_BOM_CPL/COMPONENT_CHECKLIST.csv",
+        "hardware/wulpus-v1/acquisition-pcb/manufacturing/jlcpcb/03_Reference/wulpus_acq_pcb_stackup.xls",
+        "hardware/wulpus-v1/acquisition-pcb/manufacturing/fab-order/acquisition_pcb_fab_order.zip"
+      ]
+    },
+    {
+      "id": "wulpus-v1-hv",
+      "product": "wulpus-v1",
+      "source": "hardware/wulpus-v1/hv-pcb/source",
+      "manufacturing": "hardware/wulpus-v1/hv-pcb/manufacturing",
+      "required": [
+        "hardware/wulpus-v1/hv-pcb/source/wulpus_hv_mux.PrjPcb",
+        "hardware/wulpus-v1/hv-pcb/source/PCB1.PcbDoc",
+        "hardware/wulpus-v1/hv-pcb/source/00_POWER.SchDoc",
+        "hardware/wulpus-v1/hv-pcb/source/docs/wulpus_hv_mux_schematics.PDF",
+        "hardware/wulpus-v1/hv-pcb/source/docs/wulpus_hv_mux_bom.xlsx",
+        "hardware/wulpus-v1/hv-pcb/manufacturing/jlcpcb/02_PCBA_BOM_CPL/BOM_JLCPCB.csv",
+        "hardware/wulpus-v1/hv-pcb/manufacturing/jlcpcb/02_PCBA_BOM_CPL/CPL_JLCPCB.csv",
+        "hardware/wulpus-v1/hv-pcb/manufacturing/jlcpcb/02_PCBA_BOM_CPL/COMPONENT_CHECKLIST.csv",
+        "hardware/wulpus-v1/hv-pcb/manufacturing/jlcpcb/03_Reference/wulpus_hv_mux_stackup.xls",
+        "hardware/wulpus-v1/hv-pcb/manufacturing/fab-order/hv_pcb_fab_order.zip"
+      ]
+    },
+    {
+      "id": "wulpus-v1-msp430-programmer",
+      "product": "wulpus-v1",
+      "source": "hardware/wulpus-v1/msp430-programmer/source",
+      "manufacturing": "hardware/wulpus-v1/msp430-programmer/manufacturing",
+      "required": [
+        "hardware/wulpus-v1/msp430-programmer/source/wulpus_msp430_programmer_pcb_bom.xlsx",
+        "hardware/wulpus-v1/msp430-programmer/manufacturing/jlcpcb/02_Manual_Solder/BOM_JLCPCB.csv",
+        "hardware/wulpus-v1/msp430-programmer/manufacturing/jlcpcb/02_Manual_Solder/CPL_JLCPCB.csv",
+        "hardware/wulpus-v1/msp430-programmer/manufacturing/jlcpcb/02_Manual_Solder/COMPONENT_CHECKLIST.csv",
+        "hardware/wulpus-v1/msp430-programmer/manufacturing/fab-order/msp430_programmer_pcb_fab_order.zip"
+      ]
+    },
+    {
+      "id": "wulpus-v1-nrf52-programmer",
+      "product": "wulpus-v1",
+      "source": "hardware/wulpus-v1/nrf52-programmer/source",
+      "manufacturing": "hardware/wulpus-v1/nrf52-programmer/manufacturing",
+      "required": [
+        "hardware/wulpus-v1/nrf52-programmer/source/wulpus_nrf52_programmer_pcb_bom.xlsx",
+        "hardware/wulpus-v1/nrf52-programmer/manufacturing/jlcpcb/02_Manual_Solder/BOM_JLCPCB.csv",
+        "hardware/wulpus-v1/nrf52-programmer/manufacturing/jlcpcb/02_Manual_Solder/CPL_JLCPCB.csv",
+        "hardware/wulpus-v1/nrf52-programmer/manufacturing/jlcpcb/02_Manual_Solder/COMPONENT_CHECKLIST.csv",
+        "hardware/wulpus-v1/nrf52-programmer/manufacturing/fab-order/nrf52_programmer_pcb_fab_order.zip"
+      ]
+    },
+    {
+      "id": "wulpus-v1-silicone",
+      "product": "wulpus-v1",
+      "source": "hardware/wulpus-v1/silicone-package/source",
+      "manufacturing": null,
+      "required": [
+        "hardware/wulpus-v1/silicone-package/source/wulpus_inside_mold_fdm.stl",
+        "hardware/wulpus-v1/silicone-package/source/wulpus_inside_mold_resin.stl",
+        "hardware/wulpus-v1/silicone-package/source/wulpus_outside_mold_fdm.stl",
+        "hardware/wulpus-v1/silicone-package/source/wulpus_outside_mold_resin.stl",
+        "hardware/wulpus-v1/silicone-package/source/wulpus_silicone_cap_mold.stl"
+      ]
+    },
+    {
+      "id": "wulpus-pro-acquisition",
+      "product": "wulpus-pro",
+      "source": "hardware/wulpus-pro/acquisition-dev-board/source",
+      "manufacturing": "hardware/wulpus-pro/acquisition-dev-board/manufacturing",
+      "required": [
+        "hardware/wulpus-pro/acquisition-dev-board/source/wulpus_pro_acq_pcb.PrjPcb",
+        "hardware/wulpus-pro/acquisition-dev-board/source/wulpus_pro_acq.PcbDoc",
+        "hardware/wulpus-pro/acquisition-dev-board/source/main.SchDoc",
+        "hardware/wulpus-pro/acquisition-dev-board/source/docs/wulpus_pro_acq_pcb_schematics.pdf",
+        "hardware/wulpus-pro/acquisition-dev-board/manufacturing/jlcpcb/02_PCBA_BOM_CPL/BOM_JLCPCB.csv",
+        "hardware/wulpus-pro/acquisition-dev-board/manufacturing/jlcpcb/02_PCBA_BOM_CPL/CPL_JLCPCB.csv",
+        "hardware/wulpus-pro/acquisition-dev-board/manufacturing/jlcpcb/02_PCBA_BOM_CPL/COMPONENT_CHECKLIST.csv",
+        "hardware/wulpus-pro/acquisition-dev-board/manufacturing/jlcpcb/03_Reference/wulpus_pro_acq_jlcpcb_JLC061011_2116A.stackup",
+        "hardware/wulpus-pro/acquisition-dev-board/manufacturing/fab-order/wulpus_pro_acquisition_dev_board_fab_order.zip"
+      ]
+    },
+    {
+      "id": "wulpus-pro-polycmut",
+      "product": "wulpus-pro",
+      "source": "hardware/wulpus-pro/polycmut-adapter/source",
+      "manufacturing": "hardware/wulpus-pro/polycmut-adapter/manufacturing",
+      "required": [
+        "hardware/wulpus-pro/polycmut-adapter/source/wulpus_testbench_polycmut_flexypin.PrjPcb",
+        "hardware/wulpus-pro/polycmut-adapter/source/PCB1.PcbDoc",
+        "hardware/wulpus-pro/polycmut-adapter/source/Sheet1.SchDoc",
+        "hardware/wulpus-pro/polycmut-adapter/manufacturing/jlcpcb/02_PCBA_BOM_CPL/BOM_JLCPCB.csv",
+        "hardware/wulpus-pro/polycmut-adapter/manufacturing/jlcpcb/02_PCBA_BOM_CPL/CPL_JLCPCB.csv",
+        "hardware/wulpus-pro/polycmut-adapter/manufacturing/jlcpcb/02_PCBA_BOM_CPL/COMPONENT_CHECKLIST.csv",
+        "hardware/wulpus-pro/polycmut-adapter/manufacturing/jlcpcb/03_Reference/wulpus_polycmut_adapter_schematics.pdf",
+        "hardware/wulpus-pro/polycmut-adapter/manufacturing/fab-order/polycmut_adapter_fab_order.zip"
+      ]
+    }
+  ]
+}
+

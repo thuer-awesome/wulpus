@@ -1,0 +1,30 @@
+﻿Designator,Category,Comment,Footprint,Layer,Mid_X_mm,Mid_Y_mm,Rotation_deg,Reason_Not_In_BOM_CPL
+M4,机械安装孔,Mounting Hole,Mounting_Hole,Top,32.0000,-15.0000,0,机械孔/焊盘，不是电子元件
+M3,机械安装孔,Mounting Hole,Mounting_Hole,Top,32.0000,15.0000,0,机械孔/焊盘，不是电子元件
+M2,机械安装孔,Mounting Hole,Mounting_Hole,Top,-38.0000,-15.0000,0,机械孔/焊盘，不是电子元件
+M1,机械安装孔,Mounting Hole,Mounting_Hole,Top,-38.0000,15.0000,0,机械孔/焊盘，不是电子元件
+TP9,测试焊盘,TP-SM-C-100,TP-SM-C-100,Top,-5.2000,9.2250,90,测试点铜盘，不采购、不贴装
+TP7,测试焊盘,TP-SM-C-100,TP-SM-C-100,Top,-7.4472,6.8000,90,测试点铜盘，不采购、不贴装
+TP5,测试焊盘,TP-SM-C-100,TP-SM-C-100,Top,-5.6250,6.0750,90,测试点铜盘，不采购、不贴装
+TP2,测试焊盘,TP-SM-C-100,TP-SM-C-100,Top,-5.2000,7.6250,90,测试点铜盘，不采购、不贴装
+TP1,测试焊盘,TP-SM-C-100,TP-SM-C-100,Top,-8.1000,4.5500,0,测试点铜盘，不采购、不贴装
+A1,Logo/图形,Logo ETH Zurich,eth-zurich_3mm,Top,-74.3000,-68.4500,0,丝印或铜皮图形，不是电子元件
+TP17,测试焊盘,TP-SM-C-100,TP-SM-C-100,Bottom,22.5000,14.3000,90,测试点铜盘，不采购、不贴装
+TP16,测试焊盘,TP-SM-C-100,TP-SM-C-100,Bottom,21.6000,-13.0000,90,测试点铜盘，不采购、不贴装
+TP15,测试焊盘,TP-SM-C-100,TP-SM-C-100,Bottom,16.2000,-13.0000,90,测试点铜盘，不采购、不贴装
+TP14,测试焊盘,TP-SM-C-100,TP-SM-C-100,Bottom,15.5000,15.5000,90,测试点铜盘，不采购、不贴装
+TP8,测试焊盘,TP-SM-C-100,TP-SM-C-100,Top,-30.5000,7.7000,90,测试点铜盘，不采购、不贴装
+TP13,测试焊盘,TP-SM-C-100,TP-SM-C-100,Bottom,4.1250,7.8750,90,测试点铜盘，不采购、不贴装
+TP12,测试焊盘,TP-SM-C-100,TP-SM-C-100,Bottom,-9.7500,0.2250,90,测试点铜盘，不采购、不贴装
+TP20,测试焊盘,TP-SM-C-100,TP-SM-C-100,Top,-7.7250,9.0500,90,测试点铜盘，不采购、不贴装
+TP19,测试焊盘,TP-SM-C-100,TP-SM-C-100,Bottom,-18.4083,8.6695,90,测试点铜盘，不采购、不贴装
+TP18,测试焊盘,TP-SM-C-100,TP-SM-C-100,Bottom,-18.9250,-8.1230,90,测试点铜盘，不采购、不贴装
+TP11,测试焊盘,TP-SM-C-100,TP-SM-C-100,Bottom,-11.8750,1.9500,90,测试点铜盘，不采购、不贴装
+TP10,测试焊盘,TP-SM-C-100,TP-SM-C-100,Top,-11.8000,6.7438,90,测试点铜盘，不采购、不贴装
+TP6,测试焊盘,TP-SM-C-100,TP-SM-C-100,Top,-12.7771,8.6250,90,测试点铜盘，不采购、不贴装
+TP4,测试焊盘,TP-SM-C-100,TP-SM-C-100,Top,-10.0250,9.0500,90,测试点铜盘，不采购、不贴装
+TP3,测试焊盘,TP-SM-C-100,TP-SM-C-100,Bottom,-14.6000,8.9000,90,测试点铜盘，不采购、不贴装
+J9,焊桥/配置铜盘,Solder Jumper,Jumper_3_pins,Bottom,2.5000,-0.9000,270,Solder Jumper，仅为配置焊盘，不采购元件
+J8,焊桥/配置铜盘,Solder Jumper,Jumper_3_pins,Bottom,4.7500,-2.2500,270,Solder Jumper，仅为配置焊盘，不采购元件
+J7,焊桥/配置铜盘,Solder Jumper,Jumper_3_pins,Bottom,4.7500,-7.2500,270,Solder Jumper，仅为配置焊盘，不采购元件
+J13,焊桥/配置铜盘,Solder Jumper,Jumper_3_pins,Top,-30.6000,-3.5500,270,Solder Jumper，仅为配置焊盘，不采购元件

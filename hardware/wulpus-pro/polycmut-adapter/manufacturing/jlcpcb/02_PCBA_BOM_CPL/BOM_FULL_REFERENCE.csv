@@ -1,0 +1,5 @@
+﻿Designator,Source_Name,Source_MPN1,Preferred_MPN,Description,Quantity_Per_Board,Assembly_Method,Note
+"J3, J4",91910-21169LF,,91910-21169LF,,2,SMT / 嘉立创贴片,底面 SMT；细间距连接器，贴片前必须核对 1 脚、面别和 DFM。 | 底面 SMT；细间距连接器，贴片前必须核对 1 脚、面别和 DFM。
+P1,polycmut,,polycmut,,1,外接 polyCMUT/interposer / 非嘉立创贴片,polyCMUT/interposer 外部组件，不是普通嘉立创 SMT 料；嘉立创 BOM/CPL 已排除。
+"R1, R2, R3, R4, R5, R6, R7, R8",RC0402JR-070RL,CR0402-J/-000GLF,CR0402-J/-000GLF,,8,SMT / 嘉立创贴片,
+J5,901-144-8RFX,901-144-8RFX,901-144-8RFX,"Coaxial Connector, 18 GHz, 50 Ohm, -65 to 165 degC, 5-Pin THD, RoHS, Bulk",1,PTH / 手焊,通孔同轴连接器 901-144-8RFX，嘉立创 SMT BOM/CPL 已排除，PCBA 后手焊。

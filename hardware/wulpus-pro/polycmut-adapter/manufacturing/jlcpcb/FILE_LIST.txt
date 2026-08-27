@@ -1,0 +1,24 @@
+WULPUS Pro polyCMUT adapter
+
+PCB upload ZIP: 01_PCB_Gerber_Drill/polycmut_adapter_gerber_drill_jlcpcb.zip
+PCBA data: 02_PCBA_BOM_CPL/
+Engineering references: 03_Reference/
+
+Gerber/drill upload entries:
+  PCB1.GTL
+  PCB1.GBL
+  PCB1.GTO
+  PCB1.GBO
+  PCB1.GTS
+  PCB1.GBS
+  PCB1.GTP
+  PCB1.GBP
+  PCB1.GM
+  PCB1.TXT
+
+Official BOM groups: 4
+Official BOM designators: 12
+JLCPCB SMT BOM groups: 2
+JLCPCB SMT placements: 10
+Manual/external designators: J5, P1
+Non-component P&P exclusions: 4

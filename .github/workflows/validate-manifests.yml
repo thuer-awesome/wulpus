@@ -1,0 +1,27 @@
+name: Validate archive
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out with LFS objects
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Verify deterministic hashes
+        run: python tools/scripts/generate_manifest.py --check
+      - name: Verify required board payloads
+        run: python tools/scripts/validate_repository.py
+      - name: Verify integration Markdown links
+        run: python tools/scripts/check_markdown_links.py
