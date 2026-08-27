@@ -107,11 +107,21 @@ def main() -> int:
     file_count = 0
     total_bytes = 0
     for path in ROOT.rglob("*"):
-        if not path.is_file() or ".git" in path.parts:
+        if (
+            not path.is_file()
+            or ".git" in path.parts
+            or "__pycache__" in path.parts
+            or path.suffix == ".pyc"
+        ):
+            continue
+        rel = path.relative_to(ROOT).as_posix()
+        if rel in {
+            "provenance/FILE_MANIFEST.csv",
+            "provenance/SHA256SUMS.txt",
+        }:
             continue
         file_count += 1
         total_bytes += path.stat().st_size
-        rel = path.relative_to(ROOT).as_posix()
         if any(rel.startswith(prefix) for prefix in FORBIDDEN_PARTS):
             fail(f"forbidden workspace payload is present: {rel}", errors)
         if path.name in PRIVATE_NAMES:

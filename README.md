@@ -56,7 +56,15 @@ Only the exact Samtec connector `LSHM-120-02.5-L-DV-A-N-K-TR` (LCSC `C6287797`) 
 
 ## Firmware and host software
 
-The v1 firmware and GUI are under [`firmware/wulpus-v1`](firmware/wulpus-v1) and [`software/wulpus`](software/wulpus). PRO firmware and GUI are under [`firmware/wulpus-pro`](firmware/wulpus-pro) and [`software/wulpus-pro`](software/wulpus-pro). Toolchains and vendor SDK installers are intentionally not bundled; follow each directory's official setup notes.
+The v1 firmware and GUI are under [`firmware/wulpus-v1`](firmware/wulpus-v1) and
+[`software/wulpus`](software/wulpus). The official v1 debug entry is
+[`software/wulpus/GUI_ENTRY.md`](software/wulpus/GUI_ENTRY.md), which points to
+the upstream notebook and the `wulpus/` GUI package. PRO firmware and GUI are
+under [`firmware/wulpus-pro`](firmware/wulpus-pro) and
+[`software/wulpus-pro`](software/wulpus-pro); its three official debug
+workflows are indexed in [`software/wulpus-pro/GUI_ENTRY.md`](software/wulpus-pro/GUI_ENTRY.md).
+Toolchains and vendor SDK installers are intentionally not bundled; follow
+each directory's official setup notes.
 
 ## Safety
 
@@ -71,4 +79,3 @@ Licenses are component-specific. See [`LICENSES/README.md`](LICENSES/README.md),
 ## GitHub publication status
 
 This directory is a self-contained local Git repository candidate. It deliberately has no guessed remote URL: pushing to either upstream project would mix an integration archive into an official product repository. Configure a new destination repository supplied by the owner, review the generated manifest, then push the committed branch. No claim of a remote upload is made until `git push` returns a verifiable result.
-

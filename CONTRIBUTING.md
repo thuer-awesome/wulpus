@@ -8,7 +8,9 @@ checks, and first-article result.
 
 Before opening a pull request:
 
-1. Run `python tools/scripts/generate_manifest.py` and verify the working tree.
+1. Run `python tools/scripts/generate_manifest.py` after staging any new or
+   changed files; text hashes use Git's LF form and LFS hashes use hydrated
+   object bytes. Then run it with `--check` to verify the committed manifest.
 2. Run `python tools/scripts/validate_repository.py`.
 3. Run `python tools/scripts/check_markdown_links.py`.
 4. Check that no file is larger than the GitHub limit and that no private BOM,
