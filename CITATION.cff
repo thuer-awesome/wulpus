@@ -11,8 +11,8 @@ authors:
     family-names: Benini
   - given-names: Andrea
     family-names: Cossettini
-repository-code: "https://github.com/pulp-bio/wulpus"
-url: "https://github.com/pulp-bio/wulpus"
+repository-code: "https://github.com/thuer-awesome/wulpus"
+url: "https://github.com/thuer-awesome/wulpus"
 version: "0.1.0"
 date-released: 2026-08-27
 license: "SHL-0.51 AND Apache-2.0"
@@ -21,4 +21,3 @@ keywords:
   - wearable
   - embedded
   - hardware
-
