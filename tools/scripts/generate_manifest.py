@@ -246,6 +246,22 @@ def _tracked_bytes() -> dict[str, bytes]:
     return result
 
 
+def _is_ignored(rel: str) -> bool:
+    """Return whether Git ignores an untracked path in this repository."""
+
+    try:
+        result = subprocess.run(
+            ["git", "check-ignore", "-q", "--", rel],
+            cwd=ROOT,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            check=False,
+        )
+    except FileNotFoundError as exc:
+        raise ManifestError("Git executable is not available") from exc
+    return result.returncode == 0
+
+
 def digest(path: Path) -> str:
     h = hashlib.sha256()
     with path.open("rb") as stream:
@@ -264,6 +280,10 @@ def rows() -> list[tuple[str, int, str]]:
             continue
         rel = path.relative_to(ROOT).as_posix()
         if rel in EXCLUDED or rel.startswith(".git/"):
+            continue
+        # The published tree contains tracked files and any new, non-ignored
+        # files awaiting `git add`; local logs/caches must not affect hashes.
+        if rel not in tracked and _is_ignored(rel):
             continue
         data = tracked.get(rel)
         if data is None:

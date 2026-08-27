@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import subprocess
 import sys
 from pathlib import Path
 
@@ -58,6 +59,36 @@ def check_audit(errors: list[str]) -> None:
             fail(f"missing-component CSV has {len(rows)} data rows; expected 25", errors)
 
 
+def is_ignored(rel: str) -> bool:
+    """Return whether Git ignores an untracked path."""
+
+    result = subprocess.run(
+        ["git", "check-ignore", "-q", "--", rel],
+        cwd=ROOT,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+        check=False,
+    )
+    return result.returncode == 0
+
+
+def tracked_paths() -> set[str]:
+    """Return paths present in the Git index without quote-path rewriting."""
+
+    result = subprocess.run(
+        ["git", "ls-files", "-z"],
+        cwd=ROOT,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=True,
+    )
+    return {
+        path
+        for path in result.stdout.decode("utf-8", errors="surrogateescape").split("\0")
+        if path
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--check-manifest", action="store_true", help="also run generate_manifest.py --check")
@@ -106,6 +137,7 @@ def main() -> int:
 
     file_count = 0
     total_bytes = 0
+    indexed_paths = tracked_paths()
     for path in ROOT.rglob("*"):
         if (
             not path.is_file()
@@ -119,6 +151,8 @@ def main() -> int:
             "provenance/FILE_MANIFEST.csv",
             "provenance/SHA256SUMS.txt",
         }:
+            continue
+        if rel not in indexed_paths and is_ignored(rel):
             continue
         file_count += 1
         total_bytes += path.stat().st_size
