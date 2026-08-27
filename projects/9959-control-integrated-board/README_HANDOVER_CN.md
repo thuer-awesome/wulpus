@@ -16,7 +16,7 @@
 ## 打包信息
 
 - 打包日期：2026-08-23
-- 源文件原始路径：`C:\Users\computer\Documents\LCEDA-Pro\projects\9959 Control Integrated Board.eprj2`
+- 源文件原始路径（公开版已脱敏）：`<local-easyeda-project>/9959 Control Integrated Board.eprj2`
 - 源文件格式：EasyEDA SQLite project container (`.eprj2`)
 - 源文件在打包时的磁盘时间：见 `MANIFEST_SHA256.txt`
 

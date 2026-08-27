@@ -78,7 +78,12 @@ The boards include high-voltage ultrasound transmit circuitry and stored energy.
 
 ## Provenance and licensing
 
-The exact upstream repositories, branches, commits, file counts, and local source paths are recorded in [`provenance/SOURCE_REPOSITORIES.md`](provenance/SOURCE_REPOSITORIES.md). SHA256 and a deterministic file manifest are generated in [`provenance/`](provenance/). The two private user BOM workbooks are not copied into this public-ready tree; their paths and SHA256 values are recorded in [`docs/manufacturing/missing-components/USER_BOM_PROVENANCE.md`](docs/manufacturing/missing-components/USER_BOM_PROVENANCE.md).
+The exact upstream repositories, branches, commits, file counts, and assembly
+source paths are recorded in [`provenance/SOURCE_REPOSITORIES.md`](provenance/SOURCE_REPOSITORIES.md).
+SHA256 and a deterministic file manifest are generated in [`provenance/`](provenance/).
+The two private user BOM workbooks are not copied into this public-ready tree;
+their redacted paths, sizes, and SHA256 values are recorded in
+[`docs/manufacturing/missing-components/USER_BOM_PROVENANCE.md`](docs/manufacturing/missing-components/USER_BOM_PROVENANCE.md).
 
 Licenses are component-specific. See [`LICENSES/README.md`](LICENSES/README.md), the upstream `hw/LICENSE` and `sw/LICENSE` copies, and the third-party notices shipped with the firmware. Vendor datasheet PDFs are not redistributed here; their names, source links, and hashes are listed in [`reference/datasheets`](reference/datasheets).
 
