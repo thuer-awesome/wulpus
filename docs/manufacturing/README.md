@@ -13,6 +13,12 @@ after confirming its SHA256 in `provenance/FILE_MANIFEST.csv`. The `README_*.md`
 and `FILE_LIST.txt` in every JLCPCB package are part of the release and should
 be sent to the manufacturer with the BOM/CPL.
 
+The smaller combined JLCPCB archives are retained under
+`docs/manufacturing/wulpus-v1/archives/` and
+`docs/manufacturing/wulpus-pro/archives/` for compatibility with tooling that
+expects the original package layout. The large full-repository snapshot ZIPs
+are intentionally excluded as redundant.
+
 ## Required factory checks
 
 - Confirm board name, revision, layer count, thickness, copper, and impedance
@@ -24,4 +30,3 @@ be sent to the manufacturer with the BOM/CPL.
 - For Y19/Y20, use the audit in
   [`missing-components`](missing-components) and do not change an MPN solely
   because a live LCSC stock value changed.
-

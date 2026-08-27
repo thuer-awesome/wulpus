@@ -24,3 +24,8 @@ upstream snapshot.
 `SOURCE_FILE_MAP.csv` contains 685 row-level SHA256 comparisons (336 v1 files
 and 349 PRO files). Every mapped upstream file is marked `MATCH`; this is the
 check that the reclassification did not alter the official source bytes.
+
+Package-only extras that are useful for reproduction (combined JLCPCB archives,
+the cleaned v1 Conda file, and original package metadata) are retained under
+`docs/manufacturing/` and `docs/provenance/`; generated Python caches and full
+snapshot ZIPs are excluded as documented separately.

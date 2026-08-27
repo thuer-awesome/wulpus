@@ -1,0 +1,10 @@
+Tracked source files verified byte-identical: 349
+Main BOM groups/designators: 65/164
+Main JLC SMT placements: 157
+Main P&P non-component exclusions: 29
+Adapter BOM groups/designators: 4/12
+Adapter JLC SMT placements: 10
+Adapter P&P non-component exclusions: 4
+Main official fabrication variant: pzt_hia_no_bias
+Main official JLC stackup: JLC061011_2116A, 6 layers, 1.0 mm, S50 50 ohm +/-10%
+Adapter official stackup/assembly drawing: not present in repository
