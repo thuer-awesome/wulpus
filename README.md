@@ -78,4 +78,9 @@ Licenses are component-specific. See [`LICENSES/README.md`](LICENSES/README.md),
 
 ## GitHub publication status
 
-This directory is a self-contained local Git repository candidate. It deliberately has no guessed remote URL: pushing to either upstream project would mix an integration archive into an official product repository. Configure a new destination repository supplied by the owner, review the generated manifest, then push the committed branch. No claim of a remote upload is made until `git push` returns a verifiable result.
+This directory is the integration archive for
+[`thuer-awesome/wulpus`](https://github.com/thuer-awesome/wulpus). The remote
+started with a one-line placeholder README; the integration history is merged
+without force-pushing or modifying either official upstream project. The
+published branch is `main` and must retain Git LFS objects for the design,
+manufacturing, workbook, PDF, image, and archive payloads.
