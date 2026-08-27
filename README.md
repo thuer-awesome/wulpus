@@ -23,6 +23,12 @@ The board-specific READMEs are the authoritative quick-start for file selection 
 
 ## Repository layout
 
+Each top-level domain has a short navigation page: [`hardware/README.md`](hardware/README.md),
+[`firmware/README.md`](firmware/README.md), [`software/README.md`](software/README.md),
+[`docs/README.md`](docs/README.md), [`reference/README.md`](reference/README.md),
+[`provenance/README.md`](provenance/README.md), [`projects/README.md`](projects/README.md),
+and [`tools/README.md`](tools/README.md).
+
 ```text
 hardware/       Altium source and per-board production files
 firmware/       Official MSP430, nRF52, and ESP32-C6 source trees
