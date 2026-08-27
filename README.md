@@ -84,9 +84,9 @@ Licenses are component-specific. See [`LICENSES/README.md`](LICENSES/README.md),
 
 ## GitHub publication status
 
-This directory is the integration archive for
+This directory is the integration archive intended for
 [`thuer-awesome/wulpus`](https://github.com/thuer-awesome/wulpus). The remote
 started with a one-line placeholder README; the integration history is merged
 without force-pushing or modifying either official upstream project. The
-published branch is `main` and must retain Git LFS objects for the design,
+target branch is `main` and must retain Git LFS objects for the design,
 manufacturing, workbook, PDF, image, and archive payloads.

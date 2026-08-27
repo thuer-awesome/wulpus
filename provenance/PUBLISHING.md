@@ -1,17 +1,24 @@
 # Publishing checklist
 
-The local repository has no remote because the destination repository name and
-owner were not specified, and the current environment has no authenticated
-GitHub CLI/token. Do not push this archive to `pulp-bio/wulpus` or
-`pulp-bio/wulpus-pro`; those are the upstream product repositories.
+The integration target is
+`https://github.com/thuer-awesome/wulpus.git`. It is separate from the official
+upstream repositories `pulp-bio/wulpus` and `pulp-bio/wulpus-pro`; never push
+this archive to either upstream product repository. The target initially
+contained a one-line README, which is retained as the parent of the local
+integration merge commit.
 
-After the owner creates or selects a dedicated empty GitHub repository (for
-example, `wulpus-hardware-embedded`), publish from this directory:
+Publish from this directory:
 
 ```powershell
-git remote add origin https://github.com/<owner>/<repository>.git
-git push -u origin main
 git lfs push --all origin main
+git push -u origin main
+```
+
+If the target does not provide the optional LFS locking endpoint, disable only
+the lock probe for this remote before retrying:
+
+```powershell
+git config lfs.https://github.com/thuer-awesome/wulpus.git/info/lfs.locksverify false
 ```
 
 Before pushing, confirm `git remote -v`, enable Git LFS on the destination, and
@@ -23,7 +30,16 @@ python tools/scripts/validate_repository.py --check-manifest
 python tools/scripts/check_markdown_links.py
 ```
 
-The first push should be reviewed as a new integration archive. The upstream
-source commits and the local commit IDs are already recorded in
-`SOURCE_REPOSITORIES.md` and the root changelog.
+After pushing, verify the commit and LFS payload from a fresh checkout:
 
+```powershell
+git ls-remote origin refs/heads/main
+git clone https://github.com/thuer-awesome/wulpus.git <fresh-checkout>
+git -C <fresh-checkout> lfs pull
+python <fresh-checkout>/tools/scripts/generate_manifest.py --check
+python <fresh-checkout>/tools/scripts/validate_repository.py --check-manifest
+```
+
+The upstream source commits and the local commit IDs are recorded in
+`SOURCE_REPOSITORIES.md` and the root changelog. Do not report the archive as
+published until `git ls-remote` returns the expected local `main` commit.
