@@ -21,7 +21,18 @@ jobs:
           python-version: "3.x"
       - name: Verify deterministic hashes
         run: python tools/scripts/generate_manifest.py --check
+      - name: Verify Git LFS objects
+        run: git lfs fsck
       - name: Verify required board payloads
         run: python tools/scripts/validate_repository.py
       - name: Verify integration Markdown links
         run: python tools/scripts/check_markdown_links.py
+      - name: Verify GUI source syntax and notebooks
+        run: >-
+          python -c "import json, pathlib, py_compile;
+          py_compile.compile('software/wulpus/wulpus/gui.py', doraise=True);
+          py_compile.compile('software/wulpus-pro/wulpus/gui.py', doraise=True);
+          [json.loads(pathlib.Path(p).read_text(encoding='utf-8')) for p in
+          ['software/wulpus/wulpus_gui.ipynb', 'software/wulpus-pro/wulpus_pro_gui.ipynb',
+          'software/wulpus-pro/wulpus_pro_gui_tgc.ipynb', 'software/wulpus-pro/wulpus_pro_cmuts_gui.ipynb']];
+          print('GUI entry validation OK')"
